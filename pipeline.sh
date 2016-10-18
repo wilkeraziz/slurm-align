@@ -36,7 +36,7 @@ if [[ $DO_ALIGN == 1 ]]; then
         ALIGNMENTSCRIPT="fastalign.sh"
     elif [[ "$ALIGNER" == "giza" ]]; then
         ALIGNMENTSCRIPT="giza.sh"
-    elif [[ ! -z `egrep '^balign-'` ]]; then
+    elif [[ ! -z `echo "$ALIGNER" | egrep '^balign-'` ]]; then
         ALIGNMENTSCRIPT="balign.sh"
     else
         echo "I do not recognise this aligner: $ALIGNER"

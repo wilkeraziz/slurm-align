@@ -1,3 +1,7 @@
+
+These scripts help one use he Laco cluster at ILLC to compare different alignment models.
+
+
 # Requirements
 
 
@@ -18,6 +22,9 @@ This is my own directory:
     $ ls tools/
     BayesianAligner.jar fast_align/             mergeAlignments.py     mgiza/
 
+# Corpora
+
+Under `archive/data` I have an example of a training corpus, a dev set and a test set.
 
 # How to use
 
@@ -48,7 +55,7 @@ To account for stability of the optimiser (MERT) you can run tuning/evaluation m
 
 In section (3), control resource allocation for different steps.
 
-In section (4), configure where frozen data, tools and pretrained models can be found.
+In section (4), configure where frozen data, tools and pretrained models can be found. The most important variable here is `ARCHIVE`.
 
 In section (5), configure tools that will be used, e.g., Moses, mgiza, fastalign, balign.
 
@@ -78,3 +85,4 @@ Suppose you have NEW-VARIANT of Bayesian alignment model, then
 # TO DO
 
 1. Amir: fix permissions of mgiza
+2. Philip: add to the pipeline a step that preprocess the training data (namely, generates .snt files) or make Bayesian Aligner deal with plain text.
