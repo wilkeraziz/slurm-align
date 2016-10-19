@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #SBATCH --job-name=eval
-#SBATCH --output=slurm-eval-%j.o
+#SBATCH --output=slurm-eval-%A_%a.o
 #SBATCH --cpus-per-task=5
 set -e 
 set -o pipefail

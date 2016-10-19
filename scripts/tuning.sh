@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #SBATCH --job-name=tuning
-#SBATCH --output=slurm-tuning-%j.o
+#SBATCH --output=slurm-tuning-%A_%a.o
 #SBATCH --cpus-per-task=5
 set -e 
 set -o pipefail
